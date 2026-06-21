@@ -1,0 +1,19 @@
+{
+  "name": "mariadbdatabase",
+  "version": "1.0.0",
+  "description": "API REST para Sistema de Biblioteca",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["api-rest", "express", "biblioteca", "mariadb"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.22.3"
+  }
+}
