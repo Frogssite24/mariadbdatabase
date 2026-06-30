@@ -12,7 +12,7 @@ app.listen(PORT, () => {
 ║     API REST - Sistema de Biblioteca      ║
 ╠═══════════════════════════════════════════╣
 ║                                           ║
-║  Servidor rodando na porta: ${PORT}                   ║
+║  Servidor rodando na porta: ${PORT}       ║
 ║  URL: http://localhost:${PORT}            ║
 ║                                           ║
 ║  Endpoints disponíveis:                   ║

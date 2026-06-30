@@ -1,4 +1,5 @@
 const express = require('express');
+const fileManager = require('../services/fileManagerService');
 const router = express.Router();
 const {
   cadastrarEditora,
@@ -16,6 +17,8 @@ const {
 router.post('/', async (req, res) => {
   try {
     const { nomeEditora } = req.body;
+
+    fileManager.criarArquivo(nomeEditora); 
 
     if (!nomeEditora) {
       return res.status(400).json({
@@ -48,11 +51,13 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const editoras = await obterTodasEditoras();
-
+    const text = fileManager.leArquivo();
     return res.status(200).json({
       sucesso: true,
       total: editoras.length,
-      dados: editoras
+      dados: editoras,
+      conteudoArquivo: text
+
     });
   } catch (error) {
     console.error('Erro GET /editoras:', error.message);

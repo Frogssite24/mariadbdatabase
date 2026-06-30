@@ -2,11 +2,11 @@ const mysql = require('mysql2/promise');
 
 // Configuração da conexão com MariaDB
 const connectionConfig = {
-  host: 'localhost',
-  port: 3306,
-  user: 'heitor',
-  password: 'Senha123forte!',
-  database: 'biblioteca' 
+  host: process.env.DB_HOST || 'localhost',
+  port: process.env.DB_PORT || 3306,
+  user: process.env.DB_USER || 'heitor',
+  password: process.env.DB_PSWD || 'Senha123forte!',
+  database: process.env.DB_DATABASE || 'biblioteca'
 };
 
 let connection = null;
