@@ -7,7 +7,8 @@ fs.writeFileSync(file_name, 'texto');
 }
 
 function leArquivo(){
-    return fs.readFileSync(file_name);
+    let texto = fs.readFileSync(file_name);
+    return texto.toString();
 }
 
 module.exports = {criarArquivo, leArquivo}; 
